@@ -17,10 +17,10 @@ public class DataTypes {
 		boolean var8 = true; // Boleano - Automation - tiene dos valores TRUE / FALSE
 
 		// Declarar variables
-		int x;
-		x = 10000;
+		// int x;
+//		x = 10000;
 
-		int y = 10;
+		// int y = 10;
 
 		// Char symbol example
 		char symbol = '\u00A9';
