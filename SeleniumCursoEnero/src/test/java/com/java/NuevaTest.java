@@ -7,6 +7,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import net.bytebuddy.asm.Advice.OffsetMapping.Target.AbstractReadOnlyAdapter;
+
 public class NuevaTest {
 	
 	public static WebDriver driver;
@@ -16,15 +18,17 @@ public class NuevaTest {
 	  }
 	  
 	  @Test
-	  public void googleTest() {
+	  public void googleTest() throws InterruptedException {
 		  
-			System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chrome/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Hewlett Packard\\git\\repository\\SeleniumCursoEnero\\src\\test\\resources\\drivers\\chrome\\chromedriver.exe");
 			driver = new ChromeDriver();
 			
 			driver.get("https://www.google.com/");
 			driver.manage().window().maximize();
 			
 			Assert.assertEquals(driver.getTitle(), "Google");
+			
+			Thread.sleep(5000);
 
 	  }
 
